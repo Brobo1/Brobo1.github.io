@@ -10,6 +10,7 @@ const ComponentPreviews = () => {
 			</ComponentPreview>
 		</Previews>
 	);
+
 };
 
 export default ComponentPreviews;
