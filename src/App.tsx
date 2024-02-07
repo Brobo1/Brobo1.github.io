@@ -1,12 +1,12 @@
 import './App.css'
-import {Icons} from "./components/Icons.tsx";
+import {Icons} from "./components/Icons";
 import {Box} from "@mui/material";
-import {NavBar} from "./components/NavBar.tsx";
+import {NavBar} from "./components/NavBar";
 import {BrowserRouter, Route, Routes, useLocation} from 'react-router-dom';
-import {Home} from "./components/Home.tsx";
-import {Project1} from "./components/projects/Project1.tsx";
-import {Project2} from './components/projects/Project2.tsx';
-import {Project3} from './components/projects/Project3.tsx';
+import {Home} from "./components/Home";
+import {Project1} from "./components/projects/Project1";
+import {Project2} from './components/projects/Project2';
+import {Project3} from './components/projects/Project3';
 import {animated, useTransition} from 'react-spring';
 import {ReactNode} from 'react';
 
