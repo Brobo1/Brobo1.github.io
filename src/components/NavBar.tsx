@@ -4,21 +4,24 @@ import {useLocation, useNavigate} from "react-router-dom";
 
 export function NavBar() {
 	const nav = useNavigate();
-	const loc = useLocation();
+	const {pathname} = useLocation();
 
-	const style = {
+	const style = (path: string) => ({
 		padding: '10px',
 		marginLeft: '20px',
 		transition: ' 0.1s ease',
+
+		color: pathname === path ? '#e4e4e4' : '#7c7c7c',
 		'&:hover': {
-			color: '#000000',
-			transform: 'scale(1.2)',
+			color: '#ffffff',
+			transform: 'scale(1.5)',
 		}
-	};
+	});
 	const style2 = {
 		padding: '0',
 		margin: '5px',
 		fontWeight: 100,
+		color: '#e4e4e4',
 	};
 
 
@@ -49,19 +52,19 @@ export function NavBar() {
 				<Divider color={"#707070"}/>
 
 
-				<Typography sx={style}
+				<Typography sx={style('/project1')}
 				            onClick={() => nav('/project1')}
 				>
 					Borro
 				</Typography>
 
-				<Typography sx={style}
+				<Typography sx={style('/project2')}
 				            onClick={() => nav('/project2')}
 				>
 					Second
 				</Typography>
 
-				<Typography sx={style}
+				<Typography sx={style('/project3')}
 				            onClick={() => nav('/project3')}
 				>
 					Third

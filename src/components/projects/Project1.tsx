@@ -2,7 +2,6 @@ import {Box, Divider, Typography} from "@mui/material";
 import {useNavigate} from "react-router-dom";
 
 export function Project1() {
-	const nav = useNavigate();
 	return (
 		<Box>
 			<Typography variant={"h3"}

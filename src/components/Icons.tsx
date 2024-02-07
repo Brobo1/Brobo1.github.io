@@ -12,9 +12,10 @@ export function Icons() {
 		margin: '10px',
 		height: '50px',
 		width: 'auto',
+		color: '#868686',
 		transition: ' 0.1s ease',
 		'&:hover': {
-			color: 'black',
+			color: 'white',
 			transform: 'scale(1.2)',
 		}
 	};
