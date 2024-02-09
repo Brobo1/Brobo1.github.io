@@ -13,7 +13,7 @@ export function Project2() {
 				2nd Project
 			</Typography>
 			<Divider
-				color={"#ffffff"}
+				color={"#707070"}
 				sx={{
 					marginY : '10px',
 					width: '50%',

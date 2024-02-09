@@ -1,5 +1,4 @@
-import {Box, Divider, Typography} from "@mui/material";
-import {useNavigate} from "react-router-dom";
+import {Box, Button, Divider, Typography, ButtonGroup} from "@mui/material";
 
 export function Project1() {
 	return (
@@ -13,9 +12,9 @@ export function Project1() {
 				Borro
 			</Typography>
 			<Divider
-				color={"#ffffff"}
+				color={"#707070"}
 				sx={{
-					marginY : '10px',
+					marginY: '10px',
 					width: '50%',
 				}}
 			/>
@@ -25,6 +24,20 @@ export function Project1() {
 				The website/app is a platform for borrowing and lending items. <br/>
 				We used React, MaterialUI, .NET, and SQL.
 			</Typography>
+
+			<ButtonGroup variant={"contained"}
+			             sx={{
+							 paddingY:"10px",
+			             }}
+
+			>
+				<Button>
+					Visit Website
+				</Button>
+				<Button>
+					See on GitHub
+				</Button>
+			</ButtonGroup>
 		</Box>
 	);
 }

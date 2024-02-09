@@ -1,5 +1,5 @@
 import Box from "@mui/material/Box/Box";
-import {Typography, Divider} from "@mui/material";
+import {Divider, Typography} from "@mui/material";
 
 export function Home() {
 	return (
@@ -15,7 +15,7 @@ export function Home() {
 			</Typography>
 
 			<Divider
-				color={"#ffffff"}
+				color={"#707070"}
 				sx={{
 					marginY: '10px',
 					width: '50%',

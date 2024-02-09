@@ -26,31 +26,34 @@ const AnimatedRoutes: React.FC<animProps> = ({children}) => {
 	});
 
 	return (
-		<>
-			{transitions((style, item) => (
-				<animated.div
-					style={{
-						...style,
-						position: 'absolute',
-						top: 0,
-						bottom: 0, // add these
-						right: 0,  // add these
-						left: 0,  // add these
-					}}
-				>
-					<Routes location={item}>
-						{children}
-					</Routes>
-				</animated.div>
-			))}
-		</>
+		<Box sx={{
+			position: 'relative',
+			minHeight: '200px',
+			paddingY:"20px",
+			overflow: 'hidden'
+		}}> {/* Adjust the minHeight based your needs */}
+			{
+				transitions((style, item) => (
+					<animated.div
+						style={{
+							...style,
+							position: 'absolute',
+							padding:"20px",
+						}}
+					>
+						<Routes location={item}>
+							{children}
+						</Routes>
+					</animated.div>
+				))
+			}
+		</Box>
 	);
 }
 
 function App() {
 
 	return (
-
 
 		<BrowserRouter>
 			<Box
@@ -81,18 +84,22 @@ function App() {
 							alignItems: 'center',
 							gap: '20px',
 						}}
-
 					>
 						<Box
 							sx={{
+								display: "flex",
+								flexDirection: 'column',
 								width: '100%',
 								height: '100%',
 								position: 'relative',
-								overflow: "auto", // Added
+								backgroundColor: '#313131',
+								borderRadius: '5px',
 								'&::-webkit-scrollbar': {
 									display: 'none',
 								},
-							}}>
+								boxShadow: 1,
+							}}
+						>
 							<AnimatedRoutes>
 								<Route path="/" Component={Home}/>
 								<Route path="/project1" Component={Project1}/>
@@ -101,7 +108,6 @@ function App() {
 							</AnimatedRoutes>
 						</Box>
 						<NavBar/>
-
 					</Box>
 				</Box>
 			</Box>

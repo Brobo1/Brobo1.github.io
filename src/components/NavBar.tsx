@@ -19,7 +19,7 @@ export function NavBar() {
 	});
 	const style2 = {
 		padding: '0',
-		margin: '5px',
+		margin: '0',
 		fontWeight: 100,
 		color: '#e4e4e4',
 	};
@@ -27,20 +27,19 @@ export function NavBar() {
 
 	return (
 		<>
-			<Divider orientation={"vertical"}
-			         color={"#707070"}
-			         variant="middle"
-			         sx={{
-				         height: '5em',
-				         marginTop: '80px',
 
-			         }}
-			/>
 			<Box sx={{
 				display: 'flex',
 				flexDirection: 'column',
 				justifyContent: 'space-evenly',
-				paddingX: '10px',
+				backgroundColor: '#313131',
+				borderRadius: '5px',
+				paddingX: '20px',
+				paddingY:"10px",
+
+				height: '100%',
+				width: '170px',
+				boxShadow: 1,
 			}}
 			>
 
@@ -49,8 +48,8 @@ export function NavBar() {
 				>
 					Projects
 				</Typography>
-				<Divider color={"#707070"}/>
 
+				<Divider color={"#707070"}/>
 
 				<Typography sx={style('/project1')}
 				            onClick={() => nav('/project1')}
